@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:myriad_bus_scheduler/core/error/route_exception.dart';
-import 'package:myriad_bus_scheduler/feature/authentication/presentation/pages/login/login_page.dart';
-import 'package:myriad_bus_scheduler/feature/authentication/presentation/pages/sign_up/sign_up_page.dart';
+import './routes.dart';
 
 class AppRoutes {
   static RouteSettings _route({String name}) => RouteSettings(name: name);

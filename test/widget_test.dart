@@ -7,13 +7,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:myriad_bus_scheduler/main.dart';
+import 'package:myriad_bus_scheduler/app/mi_bus.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(MiBus());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

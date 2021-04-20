@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myriad_bus_scheduler/util/styles/colors.dart';
 
 class AppTheme {
-  ThemeData main() {
+  static ThemeData main() {
     return ThemeData(
       primaryColor: colorPrimary,
       accentColor: colorSecondary,

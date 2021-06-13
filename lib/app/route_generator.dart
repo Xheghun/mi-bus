@@ -16,7 +16,7 @@ class AppRoutes {
             builder: (_) => SignUpPage(),
             settings: _route(name: SignUpPage.routeName));
       default:
-        throw RouteException();
+        return MaterialPageRoute(builder: (_) => Container());
     }
   }
 }

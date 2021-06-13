@@ -42,7 +42,7 @@ class ForgotPasswordPage extends StatelessWidget {
         Container(
           margin: EdgeInsets.symmetric(horizontal: mediaQuery.size.width * 0.15),
           width: double.infinity,
-          child: PrimaryButton(showIcon: false,),
+          child: PrimaryButton(showIcon: false,onTap: () => Navigator.pop(context),),
           ),
           Expanded(flex: 10, child: SizedBox()),
         ],

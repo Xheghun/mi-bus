@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myriad_bus_scheduler/app/routes.dart';
 import 'package:myriad_bus_scheduler/ui/screens/auth/forgot_pass/forgot_password_page.dart';
+import 'package:myriad_bus_scheduler/ui/screens/home/home_screen.dart';
 import 'package:myriad_bus_scheduler/ui/widget/buttons/primary_button.dart';
 import 'package:myriad_bus_scheduler/ui/widget/layout/base_widget.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_bus_logo.dart';
@@ -58,7 +59,7 @@ class LoginPage extends StatelessWidget {
               child: Row(
             children: [
               Expanded(child: SizedBox()),
-              PrimaryButton(),
+              PrimaryButton(onTap: () => Navigator.pushNamed(context, HomeScreen.routeName),),
             ],
           )),
           Expanded(flex: 10, child: SizedBox()),

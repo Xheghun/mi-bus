@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myriad_bus_scheduler/ui/screens/auth/forgot_pass/forgot_password_page.dart';
 import './routes.dart';
 
 class AppRoutes {
@@ -15,6 +16,11 @@ class AppRoutes {
         return MaterialPageRoute(
             builder: (_) => SignUpPage(),
             settings: _route(name: SignUpPage.routeName));
+
+      case ForgotPasswordPage.routeName:
+        return MaterialPageRoute(
+            builder: (_) => ForgotPasswordPage(),
+            settings: _route(name: ForgotPasswordPage.routeName));
       default:
         return MaterialPageRoute(builder: (_) => Container());
     }

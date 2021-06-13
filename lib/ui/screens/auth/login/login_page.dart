@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myriad_bus_scheduler/app/routes.dart';
-import 'package:myriad_bus_scheduler/ui/widget/buttons/continue_button.dart';
+import 'package:myriad_bus_scheduler/ui/screens/auth/forgot_pass/forgot_password_page.dart';
+import 'package:myriad_bus_scheduler/ui/widget/buttons/primary_button.dart';
 import 'package:myriad_bus_scheduler/ui/widget/layout/base_widget.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_bus_logo.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_textfield.dart';
@@ -49,7 +50,7 @@ class LoginPage extends StatelessWidget {
                   "FORGOT PASSWORD?",
                   style: textFieldStyle.copyWith(color: Colors.black),
                 ),
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, ForgotPasswordPage.routeName),
               ),
             ),
           ),
@@ -57,7 +58,7 @@ class LoginPage extends StatelessWidget {
               child: Row(
             children: [
               Expanded(child: SizedBox()),
-              ContinueButton(),
+              PrimaryButton(),
             ],
           )),
           Expanded(flex: 10, child: SizedBox()),

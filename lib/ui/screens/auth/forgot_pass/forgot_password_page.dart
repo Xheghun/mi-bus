@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myriad_bus_scheduler/ui/screens/auth/sign_up/sign_up_page.dart';
 import 'package:myriad_bus_scheduler/ui/widget/buttons/primary_button.dart';
 import 'package:myriad_bus_scheduler/ui/widget/layout/base_widget.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_bus_logo.dart';
@@ -7,10 +8,15 @@ import 'package:myriad_bus_scheduler/ui/widget/text/mi_textfield.dart';
 import 'package:myriad_bus_scheduler/util/styles/colors.dart';
 import 'package:myriad_bus_scheduler/util/styles/style.dart';
 
-class SignUpPage extends StatelessWidget {
-  static const routeName = "/signUp";
+class ForgotPasswordPage extends StatelessWidget {
+
+  static const String routeName = "/forgotPassword";
+
+  const ForgotPasswordPage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return BaseWidget(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +27,7 @@ class SignUpPage extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 12),
             padding: EdgeInsets.symmetric(vertical: 12),
             child: Text(
-              "Sign Up",
+              "Forgot Password",
               style:
               GoogleFonts.roboto(fontWeight: FontWeight.w700, fontSize: 28),
             ),
@@ -30,40 +36,16 @@ class SignUpPage extends StatelessWidget {
                     bottom: BorderSide(color: colorPrimary, width: 2.5))),
           ),
           MiTextField(
-            hint: "FULL NAME",
-          ),
-          MiTextField(
             hint: "E-MAIL",
-          ),
-          MiTextField(
-            hint: "PASSWORD",
-            obscureText: true,
+            textAlign: TextAlign.center,
           ),
 
-          Container(
-              child: Row(
-                children: [
-                  Expanded(child: SizedBox()),
-                  PrimaryButton(),
-                ],
-              )),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: mediaQuery.size.width * 0.15),
+          width: double.infinity,
+          child: PrimaryButton(showIcon: false,),
+          ),
           Expanded(flex: 10, child: SizedBox()),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Already have an account?"),
-              SizedBox(
-                width: 4,
-              ),
-              TextButton(
-                onPressed: () => Navigator.pop(context,),
-                child: Text(
-                  "Sign In",
-                  style: textFieldStyle.copyWith(color: colorPrimary),
-                ),
-              )
-            ],
-          )
         ],
       ),
     );

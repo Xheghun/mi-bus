@@ -6,11 +6,14 @@ class MiTextField extends StatelessWidget {
   const MiTextField({
     Key key,
     this.hint,
+    this.textAlign = TextAlign.start,
     this.obscureText = false,
   }) : super(key: key);
 
   final String hint;
   final bool obscureText;
+  final TextAlign textAlign;
+
 
 
   @override
@@ -19,6 +22,7 @@ class MiTextField extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       child: TextFormField(
         obscureText: obscureText,
+        textAlign: textAlign,
         decoration: InputDecoration(
             hintText: hint,
             hintStyle: textFieldStyle,

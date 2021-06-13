@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myriad_bus_scheduler/ui/screens/auth/sign_up/sign_up_page.dart';
 import 'package:myriad_bus_scheduler/ui/widget/buttons/primary_button.dart';
 import 'package:myriad_bus_scheduler/ui/widget/layout/base_widget.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_bus_logo.dart';
 import 'package:myriad_bus_scheduler/ui/widget/text/mi_textfield.dart';
 import 'package:myriad_bus_scheduler/util/styles/colors.dart';
-import 'package:myriad_bus_scheduler/util/styles/style.dart';
+
 
 class ForgotPasswordPage extends StatelessWidget {
 

@@ -3,6 +3,11 @@
    <application
         android:label="myriad_bus_scheduler"
         android:icon="@mipmap/ic_launcher">
+
+       <meta-data
+           android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyDJZ8sb2LzWlS6QNJIXGWQkr620Qr-TnoY"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

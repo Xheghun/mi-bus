@@ -1,4 +1,5 @@
 import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/foundation.dart';
 import 'package:myriad_bus_scheduler/core/entity/user/user.dart';
 
 abstract class UserWebService {
@@ -7,7 +8,9 @@ abstract class UserWebService {
 
 class UserWebServiceImpl implements UserWebService {
   
-  FirebaseDatabase firebaseDatabase;
+  final FirebaseDatabase firebaseDatabase;
+
+  UserWebServiceImpl({@required this.firebaseDatabase});
   
   @override
   Future<String> updateProfile(UserProfile user) async {

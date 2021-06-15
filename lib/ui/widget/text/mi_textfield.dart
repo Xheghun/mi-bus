@@ -8,12 +8,13 @@ class MiTextField extends StatelessWidget {
     this.hint,
     this.textAlign = TextAlign.start,
     this.obscureText = false,
+    this.controller,
   }) : super(key: key);
 
   final String hint;
   final bool obscureText;
   final TextAlign textAlign;
-
+  final TextEditingController controller;
 
 
   @override
@@ -21,6 +22,7 @@ class MiTextField extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: TextFormField(
+        controller: controller,
         obscureText: obscureText,
         textAlign: textAlign,
         decoration: InputDecoration(

@@ -14,3 +14,5 @@ var buttonTextButton = GoogleFonts.poppins(
 var miStyle = GoogleFonts.roboto(
     color: colorPrimary, fontWeight: FontWeight.w700, fontSize: 38);
 var textBold = miStyle.copyWith(color: Colors.black);
+
+var borderRadius12 = BorderRadius.circular(12);

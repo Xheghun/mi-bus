@@ -4,6 +4,7 @@ import 'package:myriad_bus_scheduler/core/entity/auth/login_credential.dart';
 import 'package:myriad_bus_scheduler/core/enum/view_state.dart';
 import 'package:myriad_bus_scheduler/core/usecase/auth/auth_usecase.dart';
 import 'package:myriad_bus_scheduler/ui/screens/home/home_screen.dart';
+import 'package:myriad_bus_scheduler/util/widget/misc.dart';
 import 'package:string_validator/string_validator.dart';
 
 class LoginViewModel extends BaseViewModel {
@@ -14,7 +15,7 @@ class LoginViewModel extends BaseViewModel {
 
   LoginViewModel(this.authUseCase);
 
-  String _validated() {
+  String _validationError() {
     String email = emailController.text;
     String password = passwordController.text;
     if(email.isEmpty) {
@@ -29,15 +30,21 @@ class LoginViewModel extends BaseViewModel {
   }
 
 void login(BuildContext context) async {
-    changeState(ViewState.BUSY);
-    if(_validated().isEmpty) {
+    if(_validationError().isEmpty) {
+      changeState(ViewState.BUSY);
       LoginCredential credential = LoginCredential(email: emailController.text, password: passwordController.text);
       var result = await authUseCase.login(credential);
       changeState(ViewState.IDLE);
       if(result.isEmpty) {
         Navigator.pushNamedAndRemoveUntil(context, HomeScreen.routeName, (route) => false);
+      } else {
+        showFlushBar(context, title: "Login Error", message: result);
       }
+    } else {
+      showFlushBar(context, title: "Validation Error", message: _validationError());
     }
+
+
 
 }
 

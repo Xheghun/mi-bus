@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "804901418400",
+    "project_id": "mibus-8fc4a",
+    "storage_bucket": "mibus-8fc4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804901418400:android:b274e27369ae37c22ca0c5",
+        "android_client_info": {
+          "package_name": "com.xheghun.myriad_bus_scheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804901418400-5on1j1ckvr8bqafbef7dlph3emcrdhv3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xheghun.myriad_bus_scheduler",
+            "certificate_hash": "7b4538f354dbcc3233de0018e50403e4292bdc54"
+          }
+        },
+        {
+          "client_id": "804901418400-fv12uiac268r25snprcmj0nl7gt3lfmi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xheghun.myriad_bus_scheduler",
+            "certificate_hash": "a2452a8fdb4579da96e15938fdb5364ad09accca"
+          }
+        },
+        {
+          "client_id": "804901418400-pddtuq5c7aalo04d1v38cpivfb55k2fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIuQb6ekcO2yAdYrtsa-hKv8NhzC9drbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804901418400-pddtuq5c7aalo04d1v38cpivfb55k2fp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

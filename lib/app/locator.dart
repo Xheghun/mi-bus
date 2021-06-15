@@ -8,6 +8,7 @@ import 'package:myriad_bus_scheduler/core/repo/user/user_repository.dart';
 import 'package:myriad_bus_scheduler/core/usecase/auth/auth_usecase.dart';
 import 'package:myriad_bus_scheduler/core/usecase/auth/auth_usecase_impl.dart';
 import 'package:myriad_bus_scheduler/ui/screens/auth/login/login_viewmodel.dart';
+import 'package:myriad_bus_scheduler/ui/screens/auth/sign_up/signup_viewmodel.dart';
 
 var locator = GetIt.instance;
 
@@ -21,7 +22,6 @@ void setUpDependencies() {
     ..registerLazySingleton(() => AuthRepository(locator()))
     ..registerLazySingleton(() => UserRepository(locator()))
 
-
     //webservice
     ..registerLazySingleton<AuthWebService>(
         () => AuthWebServiceImpl(firebaseAuth: locator()))
@@ -33,5 +33,6 @@ void setUpDependencies() {
     ..registerLazySingleton(() => FirebaseDatabase.instance)
 
     //view model
-    ..registerFactory(() => LoginViewModel(locator()));
+    ..registerFactory(() => LoginViewModel(locator()))
+    ..registerFactory(() => SignUpViewModel(locator()));
 }

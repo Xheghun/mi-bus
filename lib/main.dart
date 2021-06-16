@@ -8,7 +8,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   setUpDependencies();
   runApp(ChangeNotifierProvider(
-    create: (_) => BaseViewModel(),
+    create: (_) => BaseViewModel(authUseCase: locator()),
     child: MiBus(),
   ));
 }

@@ -5,4 +5,5 @@ abstract class AuthUseCase {
   Future<String> login(LoginCredential credential);
   Future<String> signUp(SignUpCredential credential);
   Future<String> forgotPassword(String email);
+  Future<bool> hasUser();
 }

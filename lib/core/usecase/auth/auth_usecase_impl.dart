@@ -41,4 +41,9 @@ class AuthUseCaseImpl implements AuthUseCase {
 
   }
 
+  @override
+  Future<bool> hasUser() async =>
+    await authRepository.isLoggedIn();
+
+
 }

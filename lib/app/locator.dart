@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:get_it/get_it.dart';
+import 'package:myriad_bus_scheduler/app/routes.dart';
+import 'package:myriad_bus_scheduler/app/viewmodel/base_viewmodel.dart';
 import 'package:myriad_bus_scheduler/core/data/webservice/auth/auth_webservice.dart';
 import 'package:myriad_bus_scheduler/core/data/webservice/user/user_webservice.dart';
 import 'package:myriad_bus_scheduler/core/repo/auth/auth_repository.dart';
@@ -34,5 +36,6 @@ void setUpDependencies() {
 
     //view model
     ..registerFactory(() => LoginViewModel(locator()))
-    ..registerFactory(() => SignUpViewModel(locator()));
+    ..registerFactory(() => SignUpViewModel(locator()))
+  ..registerFactory(() => BaseViewModel(authUseCase:  locator()));
 }

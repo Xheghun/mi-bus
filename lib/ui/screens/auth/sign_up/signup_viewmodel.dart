@@ -17,9 +17,9 @@ class SignUpViewModel extends BaseViewModel {
   SignUpViewModel(this.authUseCase);
 
   String _validationError() {
-    String email = emailController.text;
-    String password = passwordController.text;
-    String name = fullNameController.text;
+    String email = emailController.text.trim();
+    String password = passwordController.text.trim();
+    String name = fullNameController.text.trim();
 
     if (email.isEmpty) {
       return "email cannot be blank";
@@ -38,9 +38,9 @@ class SignUpViewModel extends BaseViewModel {
       changeState(ViewState.BUSY);
 
       SignUpCredential credential = SignUpCredential(
-          email: emailController.text,
-          password: passwordController.text,
-          fullName: fullNameController.text);
+          email: emailController.text.trim(),
+          password: passwordController.text.trim(),
+          fullName: fullNameController.text.trim());
       var result = await authUseCase.signUp(credential);
       changeState(ViewState.IDLE);
 

@@ -16,8 +16,8 @@ class LoginViewModel extends BaseViewModel {
   LoginViewModel(this.authUseCase);
 
   String _validationError() {
-    String email = emailController.text;
-    String password = passwordController.text;
+    String email = emailController.text.trim();
+    String password = passwordController.text.trim();
     if(email.isEmpty) {
       return "email cannot be blank";
     }else if(!isEmail(email)) {
@@ -32,7 +32,7 @@ class LoginViewModel extends BaseViewModel {
 void login(BuildContext context) async {
     if(_validationError().isEmpty) {
       changeState(ViewState.BUSY);
-      LoginCredential credential = LoginCredential(email: emailController.text, password: passwordController.text);
+      LoginCredential credential = LoginCredential(email: emailController.text.trim(), password: passwordController.text.trim());
       var result = await authUseCase.login(credential);
       changeState(ViewState.IDLE);
       if(result.isEmpty) {

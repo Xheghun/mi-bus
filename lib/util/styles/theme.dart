@@ -7,6 +7,9 @@ class AppTheme {
     return ThemeData(
       primaryColor: colorPrimary,
       accentColor: colorSecondary,
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: colorPrimary,
+      ),
       scaffoldBackgroundColor: Colors.white,
       fontFamily: GoogleFonts.poppins().fontFamily,
       focusColor: colorPrimary,

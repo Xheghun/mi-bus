@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:myriad_bus_scheduler/ui/widget/google_map_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = "/homeScreen";
@@ -10,21 +10,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    Completer<GoogleMapController> _controller = Completer();
-
-    CameraPosition cameraPosition = CameraPosition(
-        bearing: 192.8334901395799,
-        target: LatLng(37.43296265331129, -122.08832357078792),
-        tilt: 59.440717697143555,
-        zoom: 19.151926040649414);
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.filter_list),
+        onPressed: () {},
+      ),
       body: SafeArea(
-        child: GoogleMap(
-          initialCameraPosition: cameraPosition,
-          onMapCreated: (controller) {
-            _controller.complete(controller);
-          },
-        ),
+        child: Column(
+
+        )
       ),
     );
   }

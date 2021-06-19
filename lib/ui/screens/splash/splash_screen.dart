@@ -14,9 +14,6 @@ class SplashScreen extends StatelessWidget {
 
   final Future<FirebaseApp> _firebaseFuture = Firebase.initializeApp();
 
-
-
-
   Widget build(BuildContext context) {
     Future<bool> hasUser() async =>
      await Provider.of<BaseViewModel>(context).hasUser();
@@ -32,8 +29,7 @@ class SplashScreen extends StatelessWidget {
         ],
       ),
     );
-
-
+    
     return Scaffold(
       resizeToAvoidBottomInset: false,
         body: FutureBuilder(

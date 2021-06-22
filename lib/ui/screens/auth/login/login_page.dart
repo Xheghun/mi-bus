@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
         builder: (context, model, child) {
           return Stack(
             children: [
-              BaseWidget(
+              BaseLayout(
                 resizeToAvoidBottomInsets: false,
                 body: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myriad_bus_scheduler/ui/screens/auth/forgot_pass/forgot_password_page.dart';
 import 'package:myriad_bus_scheduler/ui/screens/home/home_screen.dart';
+import 'package:myriad_bus_scheduler/ui/screens/schedule_details/schedule_details.dart';
 import './routes.dart';
 
 class AppRoutes {
@@ -26,6 +27,10 @@ class AppRoutes {
         return MaterialPageRoute(
             builder: (_) => HomeScreen(),
             settings: _route(name: HomeScreen.routeName));
+      case ScheduleDetails.routeName:
+        return MaterialPageRoute(
+            builder: (_) => ScheduleDetails(),
+            settings: _route(name: ScheduleDetails.routeName));
       default:
         return MaterialPageRoute(builder: (_) => Container());
     }

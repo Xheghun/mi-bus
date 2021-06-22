@@ -14,8 +14,8 @@ class AppTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       focusColor: colorPrimary,
       iconTheme: IconThemeData(
-        color: Colors.white,
-        size: 20,
+        color: colorPrimary,
+        size: 14,
       ),
     );
   }

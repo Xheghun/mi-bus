@@ -23,7 +23,7 @@ class SignUpPage extends StatelessWidget {
         builder: (context, model, child) {
           return Stack(
             children: [
-              BaseWidget(
+              BaseLayout(
                 body: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

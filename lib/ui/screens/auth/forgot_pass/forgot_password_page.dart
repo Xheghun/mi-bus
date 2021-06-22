@@ -16,7 +16,7 @@ class ForgotPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
-    return BaseWidget(
+    return BaseLayout(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

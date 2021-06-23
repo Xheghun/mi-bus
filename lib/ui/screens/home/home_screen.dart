@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myriad_bus_scheduler/ui/screens/schedule_details/schedule_details.dart';
 import 'package:myriad_bus_scheduler/util/widget/filter_bottom_sheet.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   trailing: Icon(Icons.arrow_forward_ios, size: 14),
-                  onTap: () {},
+                  onTap: () => Navigator.pushNamed(context, ScheduleDetails.routeName),
                   title: Text("Departs from The Myriad"),
                   subtitle: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

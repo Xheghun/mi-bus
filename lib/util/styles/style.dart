@@ -16,4 +16,5 @@ var miStyle = GoogleFonts.roboto(
 var textBold = miStyle.copyWith(color: Colors.black);
 
 var borderRadius12 = BorderRadius.circular(12);
+var borderRadius4 = BorderRadius.circular(4);
 var radius25 = Radius.circular(25);
